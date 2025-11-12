@@ -1,3 +1,4 @@
+// adding option for a selecting a random entry that has been indexed
 using System;
 
 class Program
@@ -17,7 +18,8 @@ class Program
             Console.WriteLine("2. Display the journal");
             Console.WriteLine("3. Save the journal");
             Console.WriteLine("4. Load the journal");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("5. Show a random past entry");
+            Console.WriteLine("6. Quit");
             Console.Write("What would you like to do? ");
 
             string choice = Console.ReadLine();
@@ -52,6 +54,10 @@ class Program
                     break;
 
                 case "5":
+                    journal.DisplayRandomEntry();
+                    break;
+
+                case "6":
                     running = false;
                     Console.WriteLine("Remember to stay mindful, Goodbye!");
                     break;

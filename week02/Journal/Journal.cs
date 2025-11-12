@@ -66,4 +66,19 @@ public class Journal
 
         Console.WriteLine($"Journal loaded from {file} successfully");
     }
+
+    public void DisplayRandomEntry()
+    {
+        if (_entries.Count == 0)
+        {
+            Console.WriteLine("No entries yet!");
+            return;
+        }
+
+        Random rand = new Random();
+        int index = rand.Next(_entries.Count);
+        Console.WriteLine("\nHere’s a random entry from your journal:");
+        _entries[index].Display();
+    }
+
 }
