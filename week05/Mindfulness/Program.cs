@@ -1,6 +1,7 @@
 using System;
 using MindfulnessApp;
-
+    // Added Simple persistent log that counts how many times each activity has been run.
+    // Stores counts in a text file "activity_log.txt" in working directory.
 class Program
 {
     static void Main(string[] args)
