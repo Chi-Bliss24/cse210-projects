@@ -60,4 +60,3 @@ class Program
             Console.WriteLine("Goodbye. Take care!");
         }
     }
-}
