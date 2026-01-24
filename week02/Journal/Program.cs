@@ -12,7 +12,7 @@ class Program
 
         while (running)
         {
-            Console.WriteLine("***********************************************");
+            Console.WriteLine("**********************************************");
             Console.WriteLine("\nPlease select one of the following choices:");
             Console.WriteLine("1. Write a new entry");
             Console.WriteLine("2. Display the journal");

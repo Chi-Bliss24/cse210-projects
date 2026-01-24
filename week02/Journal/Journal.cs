@@ -3,7 +3,7 @@ using System;
 
 public class Journal
 {
-    // A list to hold all the journal entries
+    // A list to hold all the journal entries.
     public List<Entry> _entries = new List<Entry>();
 
     // Adds a new entry to the journal

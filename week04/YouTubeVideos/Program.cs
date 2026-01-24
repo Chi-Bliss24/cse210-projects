@@ -81,7 +81,7 @@ namespace YouTubeVideoProgram
 
             var v1 = new Video("Gizmo Review: Everything You Need to Know", "TechWithTori", 645);
             v1.AddComment("Alex", "Great review — super helpful.");
-            v1.AddComment("Maya", "I ordered one after watching this.");
+            v1.AddComment("Maya", "I ordered one after watching this..");
             v1.AddComment("Sam", "You missed a key feature at 4:20.");
             videos.Add(v1);
 

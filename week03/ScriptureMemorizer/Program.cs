@@ -7,7 +7,7 @@ class Program
     {
         {
             Console.Clear();
-            Console.WriteLine("Scripture Memorization Program\n");
+            Console.WriteLine("Scripture Memorization Program.\n");
 
             // List of scripture references and texts
             List<Scripture> scriptureList = new List<Scripture>()
