@@ -3,75 +3,6 @@ using System.Collections.Generic;
 
 namespace YouTubeVideoProgram
 {
-
-    public class Comment
-    {
-        public string Author { get; }
-        public string Text { get; }
-
-        public Comment(string author, string text)
-        {
-            Author = author ?? throw new ArgumentNullException(nameof(author));
-            Text = text ?? throw new ArgumentNullException(nameof(text));
-        }
-
-        public override string ToString()
-        {
-            return $"{Author}: {Text}";
-        }
-    }
-
-    // Represents a YouTube video that holds its title, author, length, and comments
-    public class Video
-    {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        /// <summary>Length in seconds</summary>
-        public int LengthSeconds { get; set; }
-
-        private readonly List<Comment> _comments = new List<Comment>();
-
-        public Video(string title, string author, int lengthSeconds)
-        {
-            Title = title ?? throw new ArgumentNullException(nameof(title));
-            Author = author ?? throw new ArgumentNullException(nameof(author));
-            LengthSeconds = lengthSeconds >= 0 ? lengthSeconds : throw new ArgumentOutOfRangeException(nameof(lengthSeconds));
-        }
-
-        // Add a comment object to this video
-        public void AddComment(Comment comment)
-        {
-            if (comment == null) throw new ArgumentNullException(nameof(comment));
-            _comments.Add(comment);
-        }
-
-        // Convenience overload to add by author and text
-        public void AddComment(string author, string text)
-        {
-            AddComment(new Comment(author, text));
-        }
-
-        // Returns the number of comments for the video
-        public int GetNumberOfComments()
-        {
-            return _comments.Count;
-        }
-
-        // Provide read-only access to comments (so callers can iterate)
-        public IReadOnlyList<Comment> GetComments()
-        {
-            return _comments.AsReadOnly();
-        }
-
-        // video time as mm:ss for nicer display
-        public string GetFormattedLength()
-        {
-            int minutes = LengthSeconds / 60;
-            int seconds = LengthSeconds % 60;
-            return $"{minutes}:{seconds:D2}";
-        }
-    }
-
     class Program
     {
         static void Main()
@@ -116,7 +47,7 @@ namespace YouTubeVideoProgram
 
                 foreach (var comment in video.GetComments())
                 {
-                    Console.WriteLine($"  - {comment.Author}: {comment.Text}");
+                    Console.WriteLine($"   - {comment.Author}: {comment.Text}");
                 }
 
                 Console.WriteLine();

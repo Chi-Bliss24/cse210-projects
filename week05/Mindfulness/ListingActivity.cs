@@ -37,7 +37,7 @@ namespace MindfulnessApp
             Console.WriteLine();
             Console.WriteLine(prompt);
             Console.WriteLine();
-            Console.WriteLine("You will have a few seconds to think about your answers. Prepare...");
+            Console.WriteLine("You will have a few seconds to think about your answers. Prepare....");
             ShowCountDown(5);
             Console.WriteLine();
             Console.WriteLine("Start listing items (press Enter after each).");
