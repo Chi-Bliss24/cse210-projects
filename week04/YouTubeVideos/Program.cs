@@ -88,7 +88,7 @@ namespace YouTubeVideoProgram
             var v2 = new Video("5-Minute Vegan Pancakes", "CookAlongKay", 305);
             v2.AddComment("Jordan", "Perfect breakfast recipe!");
             v2.AddComment("Priya", "Tried it and my kids loved it.");
-            v2.AddComment("Liam", "Could you show a gluten-free alternative?");
+            v2.AddComment("Liamn", "Could you show a gluten-free alternative?");
             v2.AddComment("Rosa", "Nice voiceover and clear steps.");
             videos.Add(v2);
 
